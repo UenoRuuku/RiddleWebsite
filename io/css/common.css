@@ -1,0 +1,33 @@
+body{
+    color: #c6d4df;
+    background:url( 'https://store.steampowered.com/public/images/v6/colored_body_top2.png?v=2' ) center top no-repeat #1b2838;
+}
+.jumbotron{	
+    background-color: rgba( 103, 193, 245, 0.2 );
+}
+
+body p{
+	font-size: 16px;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 0 10px;
+    letter-spacing: 2px;
+    font-weight: normal;
+    padding-top: 2px;
+}
+.jumbotron p{
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 0 10px;
+    letter-spacing: 2px;
+    font-weight: normal;
+    padding-top: 2px;
+}
+
+label{
+    color: black;
+}
+h4{
+    color:black;
+}
