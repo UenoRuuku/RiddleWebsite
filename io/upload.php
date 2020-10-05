@@ -16,7 +16,6 @@ function connectMysql()
 }
 
 
-
 $conn = connectMysql();
 $imgname = $_FILES['file']['name'];
 $tmp = $_FILES['file']['tmp_name'];
@@ -39,4 +38,5 @@ if ((($_FILES["file"]["type"] == "image/png")
 if($_POST["clear"] === "yes"){
     $stmt2 = $conn->prepare("UPDATE problems SET image = null WHERE number = ".$_POST["number"]);
     $stmt2->execute();
+    echo "<script>alert('上传成功.');history.go(-1);</script> ";
 }

@@ -38,7 +38,8 @@ function ppp()
         $problem = $stmt->fetch();
         if ($userInfo['answers'] != 25) {
             echo "<h3>" . $problem['number'] . '. ' . $problem['title'] . '</h3>';
-            if ($problem['image'] != null) {
+            if (!$problem['image']){
+            }else{
                 echo "<img style='max-width:100%' src='img/" . $problem['image'] . "'>";
             }
             echo "<div class='container text-left'><p>" . $problem['problem'] . '</p></div>';
@@ -55,7 +56,7 @@ function ppp()
 
         if ($userInfo['lockT'] == '1') {
             echo "<p>锁定时间" . $userInfo['lockTime'] . '</p>';
-            echo "<p>当前时间时间" . $datetime . '</p>';
+            echo "<p>当前时间" . $datetime . '</p>';
             echo "<p>解锁总共需要30min,请在时间到之后联系管理员解锁</p>";
         }
     } else {
