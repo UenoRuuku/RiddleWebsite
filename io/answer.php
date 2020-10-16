@@ -32,7 +32,7 @@ while ($row = $rows->fetch_assoc()) {
     }
 }
 $datetime = date_create()->format('Y-m-d H:i:s');
-$datetime_time = strtotime('+6 Hour',$datetime);
+// $datetime_time = strtotime('+6 Hour',$datetime);
 mysqli_close($db);
 
 

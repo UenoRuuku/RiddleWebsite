@@ -2,6 +2,7 @@
 <html lang="en">
 <?php
 
+include "connect.php";
 
 function ppp()
 {

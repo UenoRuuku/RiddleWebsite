@@ -19,16 +19,16 @@ USE `io`;
 -- 导出  表 io.groups 结构
 CREATE TABLE IF NOT EXISTS `groups` (
   `name` text DEFAULT NULL,
-  `passcode` bigint(20) DEFAULT NULL,
+  `passcode` text DEFAULT NULL,
   `answers` int(11) DEFAULT 1,
   `lockT` int(11) DEFAULT 0,
   `lockTime` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- 正在导出表  io.groups 的数据：~1 rows (大约)
+-- 正在导出表  io.groups 的数据：~0 rows (大约)
 /*!40000 ALTER TABLE `groups` DISABLE KEYS */;
 INSERT INTO `groups` (`name`, `passcode`, `answers`, `lockT`, `lockTime`) VALUES
-	('master', 0, 1, 0, NULL);
+	('master', 'mAs1Er', 2, 0, NULL);
 /*!40000 ALTER TABLE `groups` ENABLE KEYS */;
 
 -- 导出  表 io.problems 结构
@@ -40,11 +40,11 @@ CREATE TABLE IF NOT EXISTS `problems` (
   `answer` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- 正在导出表  io.problems 的数据：~26 rows (大约)
+-- 正在导出表  io.problems 的数据：~25 rows (大约)
 /*!40000 ALTER TABLE `problems` DISABLE KEYS */;
 INSERT INTO `problems` (`number`, `image`, `title`, `problem`, `answer`) VALUES
-	(1, '', '', '', 12345),
-	(2, '', '', '', 123),
+	(1, '', '', '', 0),
+	(2, '', '', '', 0),
 	(3, NULL, NULL, NULL, NULL),
 	(4, NULL, NULL, NULL, NULL),
 	(5, NULL, NULL, NULL, NULL),
@@ -77,11 +77,14 @@ CREATE TABLE IF NOT EXISTS `upload` (
   `name` text DEFAULT NULL,
   `content` text DEFAULT NULL,
   `judge` int(11) DEFAULT NULL,
-  `cheat` int(11) DEFAULT NULL
+  `cheat` int(11) DEFAULT NULL,
+  `number` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- 正在导出表  io.upload 的数据：~0 rows (大约)
+-- 正在导出表  io.upload 的数据：~1 rows (大约)
 /*!40000 ALTER TABLE `upload` DISABLE KEYS */;
+INSERT INTO `upload` (`date`, `name`, `content`, `judge`, `cheat`, `number`) VALUES
+	('2020-10-16 19:09:49', 'master', '1234', 0, 0, 1);
 /*!40000 ALTER TABLE `upload` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
