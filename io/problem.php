@@ -63,41 +63,15 @@ function can()
         $stmt1 = $conn->prepare($query1);
         $stmt1->execute();
         $userInfo = $stmt1->fetch();
-        if ($userInfo['answers'] == 27) {
-            echo 'style="display:none"';
-        }
-        if ($userInfo['lockT'] == '1') {
-            echo 'disabled="disabled"';
+        if ($userInfo['answers'] == 27 || $userInfo['lockT'] == '1') {
+        }else{
+            echo '<button type="submit" class="btn btn-primary">提交</button>';
         }
     } else {
-        echo 'style="display:none"';
+        echo '请先登录';
     }
 }
 
-function can2()
-{
-    $conn = connectMysql();
-    if (!isset($_SESSION)) {
-        session_start();
-    }
-    if (isset($_SESSION['username'])) {
-        $query1 = "SELECT * FROM `groups` WHERE `name` = '" . $_SESSION["username"] . "'";
-        //  取得查询结果
-        $stmt1 = $conn->prepare($query1);
-        $stmt1->execute();
-        $userInfo = $stmt1->fetch();
-        if ($userInfo['answers'] == 27) {
-            echo 'button';
-        }
-        else if ($userInfo['lockT'] == '1') {
-            echo 'button';
-        }else{
-            echo 'submit';
-        }
-    } else {
-        echo 'button';
-    }
-}
 ?>
 
 <head>
@@ -128,13 +102,7 @@ function can2()
                                                                                                 ?>>
                 <br>
                 <br>
-                <button type=<?php 
-                can2()
-                ?>
-                 class="btn btn-primary" <?php
-                can()
-                ?>
-                >提交</button>
+                <button type="submit" class="btn btn-primary">提交</button>
             </form>
         </div>
     </div>
