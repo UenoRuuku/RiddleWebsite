@@ -27,7 +27,23 @@
     <br>
     <button type="submit" class="btn btn-success" style="float:right">提交</button>
 </form>
-
+<p>
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseNone" style="color:#fff">
+            <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>注册
+        </a>
+    </p>
+    <form method="post" action="register.php" id="collapseNone" class="accordion-body collapse">
+        <h3>欢迎来到账号注册系统</h3>
+        <p>*请输入需要注册的账号名</p>
+        <input type="text" name="name" class="form-control" required>
+        <p>*请输入密码</p>
+        <input type="text" name="passcode" class="form-control" required>
+        <br>
+        <br>
+        <br>
+        <br>
+        <button type="submit" class="btn btn-success">提交</button>
+    </form>
 <p>
     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo" style="color:#fff">
         <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>账号管理系统（现仅开放跳关系统）
