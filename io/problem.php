@@ -2,7 +2,7 @@
 <html lang="en">
 <?php
 include "connect.php";
-
+date_default_timezone_set("PRC");
 function ppp()
 {
     $conn = connectMysql();
@@ -37,7 +37,7 @@ function ppp()
             echo '<p>队伍名：' . $userInfo['name'] . '</p>';
         }
 
-        $datetime = date_create()->format('Y-m-d H+6:i:s');
+        $datetime = date_create()->format('Y-m-d H:i:s');
 
 
         if ($userInfo['lockT'] == '1') {
@@ -63,7 +63,7 @@ function can()
         $stmt1 = $conn->prepare($query1);
         $stmt1->execute();
         $userInfo = $stmt1->fetch();
-        if ($userInfo['answers'] == 25) {
+        if ($userInfo['answers'] == 27) {
             echo 'style="display:none"';
         }
         if ($userInfo['lockT'] == '1') {

@@ -44,7 +44,7 @@ if ($posts["answer"] === $problem["answer"]) {
     $nu = '0';
 
     $answer2 = $userInfo['answers'] + 1;
-    echo "<script>alert('" . $answer2 . "');</script>";
+    // echo "<script>alert('" . $answer2 . "');</script>";
     echo "<script>alert('正确');history.go(-1)</script>";
     $command = $conn->prepare("UPDATE groups SET answers = " . $answer2 . ",lockT = ". $nu ." WHERE name = '" . $userInfo['name'] . "'");
     $command->execute();
@@ -55,5 +55,5 @@ if ($posts["answer"] === $problem["answer"]) {
     $stsm2->execute();
     $command2 = $conn->prepare("UPDATE groups SET lockT = '" . $nu . "',lockTime = '". $datetime ."' WHERE name = '" . $userInfo['name'] . "'");
     $command2->execute();
-    echo "<script>alert('错误：您可能将为此锁定30min，当前时间". $datetime ."，请联系管理员解除锁定');history.go(-1);</script>";
+    echo "<script>alert('错误：您可能将为此锁定2h，当前时间". $datetime ."，请联系管理员解除锁定');history.go(-1);</script>";
 }
