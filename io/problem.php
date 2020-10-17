@@ -31,7 +31,7 @@ function ppp()
             echo "<div class='container text-left'><p>" . $problem['problem'] . '</p></div>';
         }
 
-        if ($userInfo['answers'] == 27) {
+        if ($userInfo['answers'] == 25) {
             echo '<h1>*恭喜通关*</h1>';
             echo '<img src="img/通关.png" style="max-width:100%"></img>';
             echo '<p>队伍名：' . $userInfo['name'] . '</p>';
