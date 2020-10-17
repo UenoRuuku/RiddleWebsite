@@ -128,7 +128,13 @@ function can2()
                                                                                                 ?>>
                 <br>
                 <br>
-                <button type=<?phpcan2()?> class="btn btn-primary" <?phpcan()?>>提交</button>
+                <button type=<?php 
+                can2()
+                ?>
+                 class="btn btn-primary" <?php
+                can()
+                ?>
+                >提交</button>
             </form>
         </div>
     </div>
