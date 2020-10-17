@@ -64,7 +64,7 @@ function can()
         $stmt1 = $conn->prepare($query1);
         $stmt1->execute();
         $userInfo = $stmt1->fetch();
-        if ($userInfo['answers'] == 27 || $userInfo['lockT'] == '1') {
+        if ($userInfo['answers'] == 25 || $userInfo['lockT'] == '1') {
         }else{
             echo '<button type="submit" class="btn btn-primary">提交</button>';
         }
@@ -98,12 +98,13 @@ function can()
                 ?>
 
                 <br>
-                <input type="text" class="form-control text" name="answer" placeholder="请输入答案" <?php
-                                                                                                can()
-                                                                                                ?>>
+                <input type="text" class="form-control text" name="answer" placeholder="请输入答案">
                 <br>
                 <br>
-                <button type="submit" class="btn btn-primary">提交</button>
+                <!-- <button type="submit" class="btn btn-primary">提交</button> -->
+                <?php
+                    can()
+                ?>
             </form>
         </div>
     </div>
