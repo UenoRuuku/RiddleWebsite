@@ -13,7 +13,7 @@
     ?>
     <div class="container text-center">
         <div class="jumbotron">
-            <img src="img/通知.jpg">
+            <img src="img/tongzhi.png">
             <p>
                 宵禁中，预计恢复时间为次日早晨7点~
             </p>
