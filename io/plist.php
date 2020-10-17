@@ -2,6 +2,7 @@
 <html lang="en">
 <?php
 include "connect.php";
+include "goToForbidden.php";
 
 function login()
 {

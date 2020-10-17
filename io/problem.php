@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
+include "goToForbidden.php";
 include "connect.php";
 date_default_timezone_set("PRC");
 function ppp()

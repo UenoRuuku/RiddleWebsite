@@ -1,5 +1,6 @@
 <?php
 include "connect.php";
+date_default_timezone_set("PRC");
 
 if (!isset($_SESSION)) {
     session_start();
