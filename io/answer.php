@@ -36,7 +36,7 @@ $datetime = date_create()->format('Y-m-d H:i:s');
 mysqli_close($db);
 
 
-if ($posts["answer"] === $problem["answer"]) {
+if ($posts["answer"] == $problem["answer"]) {
     //上传到upload中
     $stsm = $conn->prepare("INSERT INTO upload ( name, number,content, cheat,date, judge) VALUES ('" . $userInfo['name'] . "', " . $userInfo['answers'] . ",'" . $posts["answer"] . "', '".$cheat."' , '" . $datetime . "', 'true' );");
     $stsm->execute();

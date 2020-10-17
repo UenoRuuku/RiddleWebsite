@@ -24,8 +24,8 @@ function ppp()
         $problem = $stmt->fetch();
         if ($userInfo['answers'] != 25) {
             echo "<h3>" . $problem['number'] . '. ' . $problem['title'] . '</h3>';
-            if (!$problem['image']){
-            }else{
+            if (!$problem['image']) {
+            } else {
                 echo "<img style='max-width:100%' src='img/" . $problem['image'] . "'>";
             }
             echo "<div class='container text-left'><p>" . $problem['problem'] . '</p></div>';
@@ -73,6 +73,31 @@ function can()
         echo 'style="display:none"';
     }
 }
+
+function can2()
+{
+    $conn = connectMysql();
+    if (!isset($_SESSION)) {
+        session_start();
+    }
+    if (isset($_SESSION['username'])) {
+        $query1 = "SELECT * FROM `groups` WHERE `name` = '" . $_SESSION["username"] . "'";
+        //  取得查询结果
+        $stmt1 = $conn->prepare($query1);
+        $stmt1->execute();
+        $userInfo = $stmt1->fetch();
+        if ($userInfo['answers'] == 27) {
+            echo 'button';
+        }
+        else if ($userInfo['lockT'] == '1') {
+            echo 'button';
+        }else{
+            echo 'submit';
+        }
+    } else {
+        echo 'button';
+    }
+}
 ?>
 
 <head>
@@ -103,9 +128,7 @@ function can()
                                                                                                 ?>>
                 <br>
                 <br>
-                <button type="submit" class="btn btn-primary" <?php
-                                                                can()
-                                                                ?>>提交</button>
+                <button type=<?phpcan2()?> class="btn btn-primary" <?phpcan()?>>提交</button>
             </form>
         </div>
     </div>
