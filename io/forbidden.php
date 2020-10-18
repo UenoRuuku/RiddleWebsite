@@ -15,7 +15,7 @@
         <div class="jumbotron">
             <img src="img/tongzhi.jpg">
             <p>
-                宵禁中，预计恢复时间为次日早晨7点~
+                宵禁中，预计恢复时间为次日早晨6点~
             </p>
             <p>
                 请各位注意安全

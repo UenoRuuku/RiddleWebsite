@@ -44,7 +44,8 @@ function ppp()
         if ($userInfo['lockT'] == '1') {
             echo "<p>锁定时间" . $userInfo['lockTime'] . '</p>';
             echo "<p>当前时间" . $datetime . '</p>';
-            echo "<p>解锁总共需要30min,请在时间到之后联系管理员解锁</p>";
+            echo "<p>解锁总共需要2h,请在时间到之后联系管理员解锁</p>";
+            echo "<p>新增：如果是不小心误触可以直接和管理员联系解锁</p>";
         }
     } else {
         echo '<p>请先登录</p>';
@@ -65,7 +66,8 @@ function can()
         $stmt1->execute();
         $userInfo = $stmt1->fetch();
         if ($userInfo['answers'] == 25 || $userInfo['lockT'] == '1') {
-        }else{
+        } else {
+            echo '<input type="text" class="form-control text" name="answer" placeholder="请输入答案">' . '<br>'. '<br>';
             echo '<button type="submit" class="btn btn-primary">提交</button>';
         }
     } else {
@@ -98,12 +100,9 @@ function can()
                 ?>
 
                 <br>
-                <input type="text" class="form-control text" name="answer" placeholder="请输入答案">
-                <br>
-                <br>
                 <!-- <button type="submit" class="btn btn-primary">提交</button> -->
                 <?php
-                    can()
+                can()
                 ?>
             </form>
         </div>
