@@ -56,5 +56,32 @@ if ($posts["answer"] == $problem["answer"]) {
     $stsm2->execute();
     $command2 = $conn->prepare("UPDATE groups SET lockT = '" . $nu . "',lockTime = '". $datetime ."' WHERE name = '" . $userInfo['name'] . "'");
     $command2->execute();
+    $command3 = $conn->prepare("INSERT INTO usrIP ( ip, name) VALUES (".getIp().",".$userInfo['name'].");";
     echo "<script>alert('错误：您可能将为此锁定2h，当前时间". $datetime ."，请联系管理员解除锁定');history.go(-1);</script>";
+}
+
+
+
+function getIp()
+{
+    if ($_SERVER["HTTP_CLIENT_IP"] && strcasecmp($_SERVER["HTTP_CLIENT_IP"], "unknown")) {
+        $ip = $_SERVER["HTTP_CLIENT_IP"];
+    } else {
+        if ($_SERVER["HTTP_X_FORWARDED_FOR"] && strcasecmp($_SERVER["HTTP_X_FORWARDED_FOR"], "unknown")) {
+            $ip = $_SERVER["HTTP_X_FORWARDED_FOR"];
+        } else {
+            if ($_SERVER["REMOTE_ADDR"] && strcasecmp($_SERVER["REMOTE_ADDR"], "unknown")) {
+                $ip = $_SERVER["REMOTE_ADDR"];
+            } else {
+                if (isset ($_SERVER['REMOTE_ADDR']) && $_SERVER['REMOTE_ADDR'] && strcasecmp($_SERVER['REMOTE_ADDR'],
+                        "unknown")
+                ) {
+                    $ip = $_SERVER['REMOTE_ADDR'];
+                } else {
+                    $ip = "unknown";
+                }
+            }
+        }
+    }
+    return ($ip);
 }
