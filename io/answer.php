@@ -56,7 +56,8 @@ if ($posts["answer"] == $problem["answer"]) {
     $stsm2->execute();
     $command2 = $conn->prepare("UPDATE groups SET lockT = '" . $nu . "',lockTime = '". $datetime ."' WHERE name = '" . $userInfo['name'] . "'");
     $command2->execute();
-    $command3 = $conn->prepare("INSERT INTO userip ( ip, name) VALUES (".getIp().",".$userInfo['name'].");");
+    $command3 = $conn->prepare("INSERT INTO userip ( ip, name, content) VALUES ('".$_SERVER["REMOTE_ADDR"]."','".$userInfo['name']."','".$posts["answer"]."');");
+    $command3->execute();
     echo "<script>alert('错误：您可能将为此锁定2h，当前时间". $datetime ."，请联系管理员解除锁定');history.go(-1);</script>";
 }
 
