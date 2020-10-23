@@ -27,35 +27,35 @@
                 </div>
                 <div class="row">
                     <div class="col-4">
-                        <img src="img/egg/1.png" style="width:90%">
+                        <img src="img/egg/1.png" class="img-fluid" style="width:90%">
                     </div>
                     <div class="col-4">
-                        <img src="img/egg/2.png" style="width:90%">
+                        <img src="img/egg/2.png" class="img-fluid" style="width:90%">
                     </div>
                     <div class="col-4">
-                        <img src="img/egg/3.png" style="width:90%">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-4">
-                        <img src="img/egg/4.png" style="width:90%">
-                    </div>
-                    <div class="col-4">
-                        <img src="img/egg/5.png" style="width:90%">
-                    </div>
-                    <div class="col-4">
-                        <img src="img/egg/6.png" style="width:90%">
+                        <img src="img/egg/3.png" class="img-fluid" style="width:90%">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-4">
-                        <img src="img/egg/7.png" style="width:90%">
+                        <img src="img/egg/4.png" class="img-fluid" style="width:90%">
                     </div>
                     <div class="col-4">
-                        <img src="img/egg/8.png" style="width:90%">
+                        <img src="img/egg/5.png" class="img-fluid" style="width:90%">
                     </div>
                     <div class="col-4">
-                        <img src="img/egg/9.png" style="width:90%">
+                        <img src="img/egg/6.png" class="img-fluid" style="width:90%">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <img src="img/egg/7.png" class="img-fluid" style="width:90%">
+                    </div>
+                    <div class="col-4">
+                        <img src="img/egg/8.png" class="img-fluid" style="width:90%">
+                    </div>
+                    <div class="col-4">
+                        <img src="img/egg/9.png" class="img-fluid" style="width:90%">
                     </div>
                 </div>
             </div>
