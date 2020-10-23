@@ -36,6 +36,7 @@ function ppp()
             echo '<h1>*恭喜通关*</h1>';
             echo '<img src="img/通关.png" style="max-width:100%"></img>';
             echo '<p>队伍名：' . $userInfo['name'] . '</p>';
+            echo '<p>等等，好像还可以继续？-> <a href="egg.php">Continue</a></p>'
         }
 
         $datetime = date_create()->format('Y-m-d H:i:s');

@@ -105,7 +105,7 @@
         <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>查看上传信息IP
     </a>
 </p>
-<div id="cpllapseSpecial" class="accordion-body collapse">
+<div id="collapseSpecial" class="accordion-body collapse">
 <?php
     $db = new mysqli('localhost', 'root', '', 'io');
     $rows = $db->query('SELECT * FROM userip');
