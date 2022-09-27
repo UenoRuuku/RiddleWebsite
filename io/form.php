@@ -101,25 +101,6 @@
 </div>
 
 <p>
-    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseSpecial" style="color:#fff">
-        <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>查看上传信息IP
-    </a>
-</p>
-<div id="collapseSpecial" class="accordion-body collapse">
-<?php
-    $db = new mysqli('localhost', 'root', '', 'io');
-    $rows = $db->query('SELECT * FROM userip');
-    echo '<table class="table"><thead><tr><th>队伍账号</th><th>上传内容</th><th>IP</th></tr></thead>';
-    while ($row = $rows->fetch_assoc()) {
-        echo '<tr><td>' . $row['name'] . '</td>';
-        echo '<td>' . $row['content'] . '</td>';
-        echo '<td>' . $row['ip'] . '</td></tr>';
-    }
-    echo '</table>';
-    ?>
-</div>
-
-<p>
     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFive" style="color:#fff">
         <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>账号解锁
     </a>
