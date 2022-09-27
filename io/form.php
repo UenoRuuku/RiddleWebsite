@@ -3,7 +3,7 @@
         <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>题目管理系统
     </a>
 </p>
-<form action="upload.php" enctype="multipart/form-data" method="post" id="collapseOne" class="accordion-body collapse">
+<form action="upload.php" enctype="multipart/form-data" method="post" class="accordion-body">
     <h3>欢迎来到题目管理系统</h3>
     <br>
     <p>*请选择题号（仅1-24）</p>
@@ -32,7 +32,7 @@
             <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>注册
         </a>
     </p>
-    <form method="post" action="register.php" id="collapseNone" class="accordion-body collapse">
+    <form method="post" action="register.php" class="accordion-body">
         <h3>欢迎来到账号注册系统</h3>
         <p>*请输入需要注册的账号名</p>
         <input type="text" name="name" class="form-control" required>
@@ -66,7 +66,7 @@
         <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>账号注册系统
     </a>
 </p>
-<form method="post" action="register.php" id="collapseThree" class="accordion-body collapse">
+<form method="post" action="register.php" class="accordion-body">
     <h3>欢迎来到账号注册系统</h3>
     <p>*请输入需要注册的账号名</p>
     <input type="text" name="name" class="form-control" required>
@@ -84,7 +84,7 @@
         <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>查看上传信息
     </a>
 </p>
-<div id="collapseFour" class="accordion-body collapse">
+<div id="collapseFour" class="accordion-body">
     <?php
     $db = new mysqli('localhost', 'root', '', 'io');
     $rows = $db->query('SELECT * FROM upload');
