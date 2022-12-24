@@ -1,4 +1,4 @@
-# riddleWebsite
+# RiddleWebsite
 based on Bootstrap &amp; PHP
 
 a website that can be used for riddle gamings.
